@@ -30,6 +30,7 @@ public class DataBase {
         return res;
     }
     public void UpdateQ(String query) {
+        System.out.println(query);
         Statement(query);
         try {
             stm.executeUpdate();

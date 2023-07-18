@@ -15,7 +15,7 @@ import com.sg.xtramile.domain.repository.StudentRepo;
 public class StudentRepoImp implements StudentRepo {
     private DataBase db = new DataBase();
     public StudentRepoImp() {
-        
+
     }
     public List<StudentShow> showall() {
         List<StudentShow> data = new ArrayList<StudentShow>();
@@ -32,12 +32,12 @@ public class StudentRepoImp implements StudentRepo {
         return data;
     }
     public void add(StudentData data) {
-
+        db.UpdateQ("INSERT INTO mhsdata VALUES ('" + data.getID() + "','" + data.getfname() + "','" + data.getlname() + "','" + data.getbDate().toString() + "');");
     }
     public void edit(String id, StudentData data) {
-
+        db.UpdateQ("CALL updatedata('" + id + "','" + data.getfname() + "','" + data.getlname() + "','" + data.getbDate().toString() + "');");
     }
     public void delete(String id) {
-
+        db.UpdateQ("DELETE FROM mhsdata WHERE id = '" + id + "';");
     }
 }
