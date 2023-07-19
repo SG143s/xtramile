@@ -1,4 +1,19 @@
 
+# Xtramile Assignment
+
+This project uses Spring Boot and MySql alongside clean architecture design.
+
+This is only a web API without frontend.
+
+To run the project, follow the following steps:
+
+1. Import the sql files from alpha/src/main/resources into your mysql server
+2. Change the mysql connection information on the alpha/src/main/infrastructure/persistence/Database.java file with the following format:   "jdbc:mysql://{your ip}:{your port}/xtramilemhs","{your username}","{your password}"
+3. Run the project and visit localhost:8080
+
+
+
+
 ## API Reference
 
 #### Get all items
