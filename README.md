@@ -1,2 +1,56 @@
-First Import the sql files from alpha/src/main/resources into your mysql server
-Then change the mysql login information on the alpha/src/main/infrastructure/persistence/Database.java file.
+
+## API Reference
+
+#### Get all items
+
+```http
+  GET /localhost:8080/all
+```
+This will return a json array file with the following format:
+
+```json
+{
+    "id": "{Nim Mahasiswa}",
+    "name": "{Full Name Mahasiswa}",
+    "age": "{Umur Mahasiswa}"
+}
+```
+#### Create new Entry
+To create new entry, you have to send a JSON file with this format:
+```json
+{
+    "id": "{Nim Mahasiswa}",
+    "fname": "{First Name Mahasiswa}",
+    "lname": "{Last Name Mahasiswa}",
+    "birthdate": "{Birthdate Mahasiswa, format: YYYY-MM-DD}"
+}
+```
+Into the following api link:
+```http
+  POST /localhost:8080/create
+```
+#### Edit data
+To edit an entry, you have to send a JSON file with this format:
+```json
+{
+    "id": "{Nim Mahasiswa That will be changed}",
+    "fname": "{New First Name Mahasiswa}",
+    "lname": "{New Last Name Mahasiswa}",
+    "birthdate": "{New Birthdate Mahasiswa, format: YYYY-MM-DD}"
+}
+```
+Into the following api link:
+```http
+  POST /localhost:8080/update
+```
+#### Delete entry
+To delete an entry, you have to send a JSON file with this format:
+```json
+{
+    "id": "{Nim Mahasiswa that will be deleted}"
+}
+```
+Into the following api link:
+```http
+  POST /localhost:8080/delete
+```
