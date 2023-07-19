@@ -8,7 +8,7 @@ This is only a web API without frontend.
 To run the project, follow the following steps:
 
 1. Import the sql files from [resources](alpha/src/main/resources) into your mysql server
-2. Change the mysql connection information on the [Database.java](alpha/src/main/infrastructure/persistence/Database.java) file with the following format:   ```java
+2. Change the mysql connection information on the [Database.java](alpha/src/main/infrastructure/persistence/Database.java) file with the following format:   ```
 "jdbc:mysql://{your ip}:{your port}/xtramilemhs","{your username}","{your password}" ```
 4. Run the project and visit localhost:8080
 
